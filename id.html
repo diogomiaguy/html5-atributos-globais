@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>id</title>
+</head>
+<body>
+  <!-- id: define um identificador exclusivo que deve ser único por todo o documento. -->
+
+  <ul>
+    <li onclick="showVideo(this)" data-id-video="S9uPNppGsGo">Video 1</li>
+    <li onclick="showVideo(this)" data-id-video="Mp0vhMDI7fA">Video 2</li>
+  </ul>
+
+  <iframe id="video" src=""></iframe>
+  
+  <script>
+    function showVideo(video){
+      var videoUrl = video.getAttribute("data-id-video");
+      document.getElementById("video").src = `https://www.youtube.com/embed/${videoUrl}`
+    }
+  </script>
+
+</body>
+</html>
